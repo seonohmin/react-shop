@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* { margin: 0; padding: 0; -webkit-text-size-adjust: none; word-break: keep-all; -webkit-box-sizing: border-box; box-sizing: border-box; }
+html {margin:0; padding:0;  line-height: 1.15; }
+body {
+  @apply flex flex-col items-center;
+  font-family: 'Pretendard Variable';
+}
+
+#root {
+  width:100%;
+
+}
+
+html.dark {
+  background-color: #fdfdfd;
+}
+
+button {
+  border-radius: .8rem;
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #149eca;
+}
+
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-container .carousel-slide {
+  display: flex;
+  justify-content: center;
+  height: 50rem;
+}
+
+.carousel-container .carousel-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container .carousel-slide img {
+  width: 100%;
+  vertical-align: top;
+  border: 0;
+  object-fit: cover;
+}
+
+.card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card figure img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.card:hover figure img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+.card:not(:hover) figure img {
+  transition: 0.2s ease-out;
+}
+.card-compact .card-body {
+  padding: 1rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.drawer-side {
+  align-items: normal;
+  z-index: 10;
+}
